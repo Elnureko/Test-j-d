@@ -23,7 +23,7 @@ pipeline {
         stage('Pushing Docker Image Into Official Docker Repository') {
             steps {
                 echo "Creating docker image from Dockerfile"
-                sh 'docker login -u elanveyila@gmail.com -p Mira2019.'
+                sh 'docker login -u elanveyila -p Mira2019.'
                 sh 'docker push eko/test_app:1.0'
                 sh 'echo "pushing image is finished"'
             }
